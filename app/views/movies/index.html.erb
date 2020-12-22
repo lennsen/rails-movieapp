@@ -1,0 +1,29 @@
+<div class="hero">
+  <div class="container flex">
+    <div>
+      <%= image_tag(@movie.image) %>
+    </div>
+    <div class="hero-content">
+      <h2><%= @movie.title %></h2>
+      <p><%= @movie.plot %>Former NASA pilot Cooper (Matthew McConaughey) and a team of researchers travel across the galaxy to find out which of three planets could be mankind's new home.</p>
+      <!-- <a href="#">Read More</a> -->
+      <%= link_to "Learn more", movie_path(@movie) %>
+    </div>
+  </div>
+</div>
+
+<div class="main">
+  <div class="container">
+  <h2>Popular Films</h2>
+
+    <% @movies.each do |movie| %>
+    <div class="movie">
+      <%= image_tag(movie.image) %>
+      <h3><%= movie.title %></h3>
+      <p><%= movie.release_year %></p>
+      <%= link_to "Learn more", movie_path(movie) %>
+    </div>
+    <% end %>
+
+  </div>
+</div>
