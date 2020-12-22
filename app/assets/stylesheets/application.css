@@ -133,6 +133,10 @@ h3 a {
   height: 450px;
 }
 
+.movie-info {
+  margin-left: 3rem;
+}
+
 .movie:nth-child(5n + 6), .actor:nth-child(5n + 6)  {
   margin: 0 0 80px 0;
 }
@@ -178,8 +182,9 @@ p.year {
   width: calc(100% - 224px);
 }
 
-.movie-show .movie p {
+.movie-show .movie p, .actor p {
   display: block;
+  margin-bottom: 10px;
 }
 
 .movie-show .movie p.year {
